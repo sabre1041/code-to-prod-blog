@@ -65,7 +65,7 @@ spec:
       - name: source
         resource: app-git
 
-  - name: build
+  - name: build-and-push
     taskRef:
       name: build-from-dockerfile
     runAfter:

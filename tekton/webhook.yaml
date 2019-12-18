@@ -29,7 +29,7 @@ spec:
         pipelineRef:
           name: reverse-words-build-pipeline
         serviceAccounts:
-          - taskName: build
+          - taskName: build-and-push
             serviceAccount: reversewords-pipeline
         params:
           - name: imageTag
@@ -76,6 +76,8 @@ metadata:
 spec:
   port:
     targetPort: 8080
+  tls:
+    termination: edge
   to:
     kind: Service
     name: el-webhook

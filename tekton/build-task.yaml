@@ -5,8 +5,8 @@ metadata:
 spec:
   inputs:
     resources:
-     - name: source
-       type: git
+    - name: source
+      type: git
     params:
     - name: TLSVERIFY
       description: Verify the TLS on the registry endpoint (for push/pull to a non-TLS registry)
